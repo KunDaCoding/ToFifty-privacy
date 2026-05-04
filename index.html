@@ -114,6 +114,9 @@
   .section:nth-child(2) { animation-delay: 0.45s; }
   .section:nth-child(3) { animation-delay: 0.55s; }
   .section:nth-child(4) { animation-delay: 0.65s; }
+  .section:nth-child(5) { animation-delay: 0.75s; }
+  .section:nth-child(6) { animation-delay: 0.85s; }
+  .section:nth-child(7) { animation-delay: 0.95s; }
 
   .section::before {
     content: '';
@@ -187,7 +190,7 @@
     text-align: center;
     margin-top: 60px;
     opacity: 0;
-    animation: fadeUp 0.7s ease forwards 0.75s;
+    animation: fadeUp 0.7s ease forwards 1.05s;
   }
 
   .footer-ornament {
@@ -231,7 +234,7 @@
     <div class="game-name">1 to 50</div>
     <div class="page-title">Privacy Policy</div>
     <div class="divider"></div>
-    <div class="updated-date">Last updated: 2026-04-27</div>
+    <div class="updated-date">Last updated: 2026-05-05</div>
   </div>
 
   <div class="sections">
@@ -240,13 +243,15 @@
       <div class="section-number">01</div>
       <div class="section-title">Data Collection</div>
       <div class="section-body">
-        本遊戲收集以下資料，用於排行榜功能的正常運作：
+        本遊戲收集以下資料，用於帳號識別與排行榜功能的正常運作：
         <ul class="data-list">
-          <li>玩家暱稱（Nickname）</li>
-          <li>所在地區（Region）</li>
-          <li>性別（Gender）</li>
-          <li>遊戲分數（Game Score）</li>
+          <li>Apple Game Center 玩家識別碼（Game Center Player ID）— 用於唯一識別玩家身份，防止排行榜作弊</li>
+          <li>玩家暱稱（Nickname）— 玩家自行輸入</li>
+          <li>所在地區（Region）— 玩家自行選擇</li>
+          <li>性別（Gender）— 玩家自行選擇</li>
+          <li>遊戲成績（Game Score）— 最佳成績與歷史紀錄</li>
           <li>裝置產生的匿名識別碼（Anonymous Device UID）</li>
+          <li>購買狀態（Purchase Status）— 是否已購買遊戲內付費功能</li>
         </ul>
       </div>
     </div>
@@ -255,20 +260,56 @@
       <div class="section-number">02</div>
       <div class="section-title">Purpose of Use</div>
       <div class="section-body">
-        所有收集的資料僅用於顯示排行榜，不會出售、租借或以任何形式提供給第三方。我們不會將您的資料用於廣告或行銷目的。
+        所有收集的資料僅用於以下目的：
+        <ul class="data-list">
+          <li>顯示全球與地區排行榜</li>
+          <li>透過 Apple Game Center 驗證玩家身份，確保每位玩家在排行榜上擁有唯一位置</li>
+          <li>在玩家更換裝置或重新安裝時還原遊戲進度</li>
+          <li>記錄付費功能解鎖狀態</li>
+        </ul>
+        我們不會將您的資料出售、租借或提供給任何第三方，也不會用於廣告或行銷目的。
       </div>
     </div>
 
     <div class="section">
       <div class="section-number">03</div>
-      <div class="section-title">Data Deletion</div>
+      <div class="section-title">Third-Party Services</div>
       <div class="section-body">
-        您可以隨時在遊戲內的設定頁面中刪除您的所有資料。刪除後，您的資訊將從我們的伺服器上永久移除，且無法復原。
+        本遊戲使用以下第三方服務處理部分資料：
+        <ul class="data-list">
+          <li><strong>Apple Game Center</strong> — 用於玩家身份驗證。適用 Apple 隱私政策：<a href="https://www.apple.com/legal/privacy/" target="_blank">apple.com/legal/privacy</a></li>
+          <li><strong>Supabase</strong> — 用於雲端儲存玩家資料（暱稱、地區、成績等）。適用 Supabase 隱私政策：<a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></li>
+          <li><strong>Apple In-App Purchase（StoreKit）</strong> — 用於處理遊戲內購買交易。付款資訊由 Apple 直接處理，本遊戲不會儲存任何付款資訊。</li>
+        </ul>
       </div>
     </div>
 
     <div class="section">
       <div class="section-number">04</div>
+      <div class="section-title">Data Storage & Security</div>
+      <div class="section-body">
+        玩家資料儲存於 Supabase 提供的雲端伺服器。我們採取合理的技術措施保護您的資料安全。本遊戲不會收集任何敏感個人資訊，如電子郵件地址、電話號碼或位置資訊。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-number">05</div>
+      <div class="section-title">Data Deletion</div>
+      <div class="section-body">
+        您可以隨時在遊戲內的設定頁面中刪除您的帳號。刪除後，您的所有資料將從我們的伺服器上永久移除，且無法復原。Apple Game Center 帳號不受影響，僅刪除本遊戲相關的資料。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-number">06</div>
+      <div class="section-title">Children's Privacy</div>
+      <div class="section-body">
+        本遊戲不針對 13 歲以下兒童設計，也不會在知情的情況下收集 13 歲以下兒童的個人資料。若發現有此情況，請立即與我們聯絡，我們將盡快刪除相關資料。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-number">07</div>
       <div class="section-title">Contact</div>
       <div class="section-body">
         如有任何隱私相關疑問，請透過以下方式聯絡我們：<br><br>
